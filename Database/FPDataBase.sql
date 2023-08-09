@@ -18,6 +18,24 @@ CREATE TABLE [dbo].[Account](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
+
+/* User*/
+
+CREATE TABLE [dbo].[User](
+	[AccountID] [int] IDENTITY(1,1) NOT NULL,
+	[Id] [int] null,
+	[FullName] [varchar](100) null,
+	[CustomerID] [int] NULL,
+	[Gender] [tinyint] NULL,
+	[Email] [varchar](50) NULL,	
+	[Role] [int] NULL,
+ CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+	[AccountID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
 /****** Object:  Table [dbo].[Categories] ******/
 SET ANSI_NULLS ON
 GO
@@ -124,12 +142,18 @@ GO
 
 
 SET IDENTITY_INSERT [dbo].[Account] ON 
-
-INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (1, N'cust1@gmail.com', N'123', 2002, 1, 2)
-INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (2, N'cust2@gmail.com', N'123', 2004, 0, 2)
-INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (3, N'emp1@fpt.edu.vn', N'123', 2005, 0, 1)
-INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (4, N'emp2@fpt.edu.vn', N'123', 2006, 1, 1)
+INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (1, N'emp1@fpt.edu.vn', N'123', 2005, 0, 1)
+INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (2, N'cust1@gmail.com', N'123', 2002, 1, 2)
+INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (3, N'cust2@gmail.com', N'123', 2004, 0, 2)
+INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender], [Role]) VALUES (4, N'cust3@fpt.edu.vn', N'123', 2006, 1, 2)
 SET IDENTITY_INSERT [dbo].[Account] OFF
+
+SET IDENTITY_INSERT [dbo].[User] ON 
+INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (1, 1,N'Than Long Dai Hiep',0978522556, 0, N'emp1@fpt.edu.vn', 1)
+INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (2, 2,N'Than Long Dai Hiep' ,0978522556, 1, N'cust1@gmail.com', 2)
+INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (3, 3,N'Than Long Dai Hiep' ,0978522556, 0, N'cust2@gmail.com', 2)
+INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (4, 4,N'Than Long Dai Hiep',0978522556, 1, N'cust3@fpt.edu.vn', 2)
+SET IDENTITY_INSERT [dbo].[User] OFF
 
 
 SET IDENTITY_INSERT [dbo].[Product] ON 
