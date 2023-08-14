@@ -1,9 +1,11 @@
 <%-- 
-    Document   : cart
-    Created on : Mar 11, 2023, 5:06:12 PM
+    Document   : Account
+    Created on : Aug 9, 2023, 9:34:18 PM
     Author     : DELL
 --%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -11,7 +13,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Manager- MoniterStore</title>
+        <title>Manager - MoniterStore</title>
         <link rel="stylesheet" href="CSS/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +22,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     </head>
-    <title>Manager Product</title>
+    <title>Manager Account</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -28,6 +30,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
     <style>
         body {
             color: #566787;
@@ -297,55 +300,44 @@
         <div class="table-wrapper">
             <div class="table-title">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <h2>Manage <b>Product</b></h2>
-                    </div>
-                    <div class="col-sm-6">
-                        <div style="background: #566787; padding: 14px 10px 10px 16px; margin-left: 90%; width: 53px">
-                            <a href="add"><i class="material-icons">&#xE147;</i></a>
-                        </div> 
+                    <div class="col-sm-6" style="text-align: center">
+                        <h2>Manage <b>Account</b></h2>
                     </div>
                 </div>
             </div>
             <table class="table table-striped table-hover">
                 <thead style="text-align: center">
                     <tr>
-                        <th>ID</th>
-                        <th>Price</th> 
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Image</th>                                    
-                        <th>CateID</th>
-                        <th>Update</th>
-                        <th>Delete</th>
+                        <th>AccountID</th>
+                        <th>Email</th> 
+                        <th>CustomerID</th>
+                        <th>Gender</th>                                    
+                        <th>Role</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <c:forEach items="${requestScope.listM}" var="m">
+                <tbody style="text-align: center">
+                    <c:forEach items="${accountM}" var="a">
                         <tr>
-                            <td>${m.id}</td>
-                            <td>${m.price}$</td>
-                            <td>${m.name}</td>
-                            <td>${m.description}</td>
-                            <td><img src="${m.image}" width="50px" height="50px" alt="alt"/></td>                                                    
-                            <td>${m.cateID}</td>
+                            <td class="text-muted mb-0 ms-2" >${a.userID}</td>
+                            <td class="text-muted mb-0 ms-2" >${a.email}$</td>
+                            <td>${a.customerID}</td>
                             <td>
-                                <a href="update?id=${m.id}"><i class="btn btn-primary" data-toggle="tooltip">update</i></a>
-                            </td>
+                                <c:if test="${a.gender == true}">
+                                    <p class="text-muted mb-0 ms-2">Nam</p>
+                                </c:if>
+                                <c:if test="${a.gender == false}">
+                                    <p class="text-muted mb-0 ms-2">Nữ</p>
+                                </c:if>  
+                            </td>                                                    
+                            <td>${a.role}</td>
                             <td>
-                                <a href="#" onclick="doDelete('${m.id}')" ><i class="btn btn-primary" data-toggle="tooltip">Delete</i></a>
+                                <a href="updateAccount?id=${a.userID}"><i class="btn btn-primary" data-toggle="tooltip">Edit</i></a>
                             </td>
                         </tr>
                     </c:forEach>
                 </tbody>
             </table>
         </div>
-        <script type="text/javascript">
-            function doDelete(id) {
-                if (confirm("Are you sure to delete category with id" + id)) {
-                    window.location = "delete?id=" + id;
-                }
-            }
-        </script>
     </body>
 </html>

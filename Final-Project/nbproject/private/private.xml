@@ -3,8 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/Final-Project/web/details.jsp</file>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/Final-Project/web/home.jsp</file>
+            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/web/manager.jsp</file>
+            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/src/java/dal/AdminDAO.java</file>
+            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/web/updateAccount.jsp</file>
+            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/web/managerAccount.jsp</file>
+            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/src/java/controller/admin/UpdateAccountServlet.java</file>
         </group>
     </open-files>
 </project-private>

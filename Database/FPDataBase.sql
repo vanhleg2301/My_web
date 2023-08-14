@@ -24,7 +24,7 @@ GO
 CREATE TABLE [dbo].[User](
 	[AccountID] [int] IDENTITY(1,1) NOT NULL,
 	[Id] [int] null,
-	[FullName] [varchar](100) null,
+	[FullName] [nvarchar](100) null,
 	[CustomerID] [int] NULL,
 	[Gender] [tinyint] NULL,
 	[Email] [varchar](50) NULL,	
@@ -149,10 +149,10 @@ INSERT [dbo].[Account] ([AccountID], [Email], [Password], [CustomerID], [Gender]
 SET IDENTITY_INSERT [dbo].[Account] OFF
 
 SET IDENTITY_INSERT [dbo].[User] ON 
-INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (1, 1,N'Than Long Dai Hiep',0978522556, 0, N'emp1@fpt.edu.vn', 1)
-INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (2, 2,N'Than Long Dai Hiep' ,0978522556, 1, N'cust1@gmail.com', 2)
-INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (3, 3,N'Than Long Dai Hiep' ,0978522556, 0, N'cust2@gmail.com', 2)
-INSERT [dbo].[Account] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (4, 4,N'Than Long Dai Hiep',0978522556, 1, N'cust3@fpt.edu.vn', 2)
+INSERT [dbo].[User] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (1, 1,N'Dai Hiep',0978522556, 0, N'emp1@fpt.edu.vn', 1)
+INSERT [dbo].[User] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (2, 2,N'Than Long' ,0978522556, 1, N'cust1@gmail.com', 2)
+INSERT [dbo].[User] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (3, 3,N'Dai Hiep' ,0978522556, 0, N'cust2@gmail.com', 2)
+INSERT [dbo].[User] ([AccountID], [Id], [FullName], [CustomerID], [Gender], [Email], [Role]) VALUES (4, 4,N'Long Dai',0978522556, 1, N'cust3@fpt.edu.vn', 2)
 SET IDENTITY_INSERT [dbo].[User] OFF
 
 
