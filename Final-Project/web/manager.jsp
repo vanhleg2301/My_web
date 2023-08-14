@@ -340,6 +340,7 @@
                 </tbody>
             </table>
         </div>
+        <script src="assets/js/appValidate.js"></script>
         <script type="text/javascript">
             function doDelete(id) {
                 if (confirm("Are you sure to delete category with id" + id)) {

@@ -339,5 +339,7 @@
                 </tbody>
             </table>
         </div>
+        
+        <script src="assets/js/appValidate.js"></script>
     </body>
 </html>
