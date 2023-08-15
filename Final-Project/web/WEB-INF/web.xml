@@ -37,6 +37,9 @@
             60
         </session-timeout>
     </session-config>
+    <welcome-file-list>
+        <welcome-file>LoginServlet</welcome-file>
+    </welcome-file-list>
     <!--    <resource-ref>
         <res-ref-name>Dbcon</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>

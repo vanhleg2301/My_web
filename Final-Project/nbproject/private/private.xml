@@ -2,12 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/web/manager.jsp</file>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/src/java/dal/AdminDAO.java</file>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/web/updateAccount.jsp</file>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/web/managerAccount.jsp</file>
-            <file>file:/D:/NetBeanProjects--------------------------/FP_HE161142_Block_5/PRJ_ThayCau/Final-Project/src/java/controller/admin/UpdateAccountServlet.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
